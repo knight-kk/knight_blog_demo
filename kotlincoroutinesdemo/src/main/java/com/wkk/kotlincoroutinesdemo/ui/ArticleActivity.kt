@@ -12,9 +12,9 @@ import com.wkk.kotlincoroutinesdemo.adapter.ArticleAdapter
 import com.wkk.kotlincoroutinesdemo.etx.toast
 import kotlinx.android.synthetic.main.activity_view_model.*
 
-class ViewModelActivity : AppCompatActivity() {
+class ArticleActivity : AppCompatActivity() {
     private val adapter by lazy { ArticleAdapter() }
-    private val viewModel: MyViewModel by viewModels()
+    private val viewModel: ArticleViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,7 @@ class ViewModelActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         recyclerView.adapter = adapter
-
+        //观察文章列表数据
         viewModel.articleListData.observe(this, Observer { list ->
             loadProgress.visibility = View.GONE
             adapter.submitList(list)
@@ -34,10 +34,9 @@ class ViewModelActivity : AppCompatActivity() {
                 toast(it)
             }
         })
-
         btn.setOnClickListener {
             loadProgress.visibility = View.VISIBLE
-            viewModel.fetchArticleList(1)
+            viewModel.fetchArticleList(1) //请求数据
         }
     }
 }

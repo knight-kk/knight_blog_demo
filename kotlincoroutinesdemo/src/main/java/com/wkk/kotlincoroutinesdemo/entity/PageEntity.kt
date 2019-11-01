@@ -4,7 +4,7 @@ package com.wkk.kotlincoroutinesdemo.entity
  *
  * Created by rtvt-03 on 2019-09-12.
  */
-class PageEntity<T>(
+data class PageEntity<T>(
     val curPage:Int,
     val offset:Int,
     val over:Boolean,
@@ -12,5 +12,4 @@ class PageEntity<T>(
     val PageCount:Int,
     val total:Int,
     val datas:List<T>
-
 )

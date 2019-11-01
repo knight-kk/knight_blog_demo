@@ -41,7 +41,6 @@ object RetrofitManger {
             chain.proceed(request)
         }
 
-        val trustManager = TrustAllManager()
 
         OkHttpClient.Builder()
             .addInterceptor(httpLoggingInterceptor)
@@ -49,36 +48,7 @@ object RetrofitManger {
             .connectTimeout(120L, TimeUnit.SECONDS)
             .readTimeout(120L, TimeUnit.SECONDS)
             .writeTimeout(120L, TimeUnit.SECONDS)
-            .sslSocketFactory(
-                createTrustAllSSLFactory(
-                    trustManager
-                ), trustManager
-            )
-            .hostnameVerifier(createTrustAllHostnameVerifier())
             .build()
     }
 
-    private fun createTrustAllHostnameVerifier(): HostnameVerifier {
-        return HostnameVerifier { _: String, _: SSLSession -> true }
-    }
-
-    private fun createTrustAllSSLFactory(trustAllManager: TrustAllManager): SSLSocketFactory {
-        val sslContext = SSLContext.getInstance("TLS")
-        sslContext.init(null, arrayOf(trustAllManager), SecureRandom())
-        return sslContext.socketFactory
-    }
-
-    class TrustAllManager : X509TrustManager {
-        override fun checkClientTrusted(chain: Array<out X509Certificate>?, authType: String?) {
-        }
-
-        override fun checkServerTrusted(chain: Array<out X509Certificate>?, authType: String?) {
-
-        }
-
-        override fun getAcceptedIssuers(): Array<X509Certificate> {
-            return emptyArray<X509Certificate>()
-        }
-
-    }
 }

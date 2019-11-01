@@ -1,23 +1,13 @@
 package com.wkk.kotlincoroutinesdemo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.lifecycle.*
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.wkk.kotlincoroutinesdemo.adapter.ArticleAdapter
-import com.wkk.kotlincoroutinesdemo.api.RetrofitManger
+import androidx.appcompat.app.AppCompatActivity
 import com.wkk.kotlincoroutinesdemo.etx.openActivity
-import com.wkk.kotlincoroutinesdemo.etx.toast
+import com.wkk.kotlincoroutinesdemo.ui.ArticleActivity
 import com.wkk.kotlincoroutinesdemo.ui.LifecycleScopeActivity
 import com.wkk.kotlincoroutinesdemo.ui.LiveDataActivity
-import com.wkk.kotlincoroutinesdemo.ui.ViewModelActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.CoroutineExceptionHandler
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+
 
 /**
  *
@@ -32,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn1.setOnClickListener {
-            openActivity(ViewModelActivity::class.java)
+            openActivity(ArticleActivity::class.java)
 
         }
 
