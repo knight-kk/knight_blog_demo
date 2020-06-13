@@ -1,2 +1,0 @@
-include ':kotlincoroutinesdemo'
-rootProject.name='knight_blog_demo'

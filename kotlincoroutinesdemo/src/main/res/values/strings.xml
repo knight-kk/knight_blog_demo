@@ -1,4 +1,0 @@
-<resources>
-    <string name="app_name">KotlinCoroutinesDemo</string>
-    <string name="weather">当前温度:%.2f℃</string>
-</resources>
