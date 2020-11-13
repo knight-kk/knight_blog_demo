@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <OnClick/>
+    </Transition>
+
+
+    <StateSet motion:defaultState="@id/start">
+        <State motion:constraints="@id/start" />
+
+    </StateSet>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/box"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:motionProgress="20">
+            <Motion motion:transitionEasing="linear" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/box">
+            <Layout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent" />
+
+            <Transform
+                android:rotationX="180"
+                android:scaleX="0.5"
+                android:scaleY="0.5" />
+
+
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

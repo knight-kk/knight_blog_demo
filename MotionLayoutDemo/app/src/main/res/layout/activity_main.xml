@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btnHWTel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="仿华为拨号界面" />
+
+    <Button
+        android:id="@+id/btnCodeOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="代码控制" />
+
+    <Button
+        android:id="@+id/btnViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="和ViewPager组合使用"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnEasterEggs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="仿Android 11 彩蛋"
+        android:textAllCaps="false" />
+</androidx.appcompat.widget.LinearLayoutCompat>

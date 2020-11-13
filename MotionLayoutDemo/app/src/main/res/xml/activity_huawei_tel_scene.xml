@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <OnSwipe />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:framePosition="80"
+                motion:motionTarget="@id/imgPhone">
+                <CustomAttribute
+                    motion:attributeName="srcAlpha"
+                    motion:customFloatValue="0" />
+                <CustomAttribute
+                    motion:attributeName="altSrcAlpha"
+                    motion:customFloatValue="0" />
+            </KeyAttribute>
+
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/telKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:elevation="2dp"
+            motion:layout_constraintBottom_toTopOf="@+id/telBottomNav"
+            motion:layout_constraintDimensionRatio="1.1" />
+        <Constraint
+            android:id="@+id/imgPhone"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="2dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/telKeyboard"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="srcAlpha"
+                motion:customFloatValue="1" />
+            <CustomAttribute
+                motion:attributeName="altSrcAlpha"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/telKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:elevation="2dp"
+            motion:layout_constraintDimensionRatio="1.1"
+            motion:layout_constraintTop_toTopOf="@id/telBottomNav" />
+        <Constraint
+            android:id="@+id/imgPhone"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="2dp"
+            motion:layout_constraintBottom_toTopOf="@id/telBottomNav"
+            motion:layout_constraintEnd_toEndOf="parent">
+            <CustomAttribute
+                motion:attributeName="srcAlpha"
+                motion:customFloatValue="0" />
+            <CustomAttribute
+                motion:attributeName="altSrcAlpha"
+                motion:customFloatValue="1" />
+            <Transform
+                android:scaleX="0.9"
+                android:scaleY="0.9" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

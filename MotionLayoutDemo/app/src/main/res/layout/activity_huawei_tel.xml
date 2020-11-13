@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_huawei_tel_scene"
+    tools:context=".HuaweiTelActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--数组键盘-->
+    <ImageView
+        android:id="@+id/telKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:src="@drawable/tel_keyboard"
+        app:layout_constraintBottom_toTopOf="@+id/telBottomNav"
+        app:layout_constraintDimensionRatio="1.1" />
+
+    <!-- 底部导航栏-->
+    <ImageView
+        android:id="@+id/telBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:src="@drawable/tel_bottom_nav"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!--拨号键-->
+    <com.wkk.motionlayoutdemo.widget.CrossFadeImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_circle"
+        android:elevation="2dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_local_phone_24"
+        app:altSrc="@drawable/ic_baseline_dialpad_24"
+        app:layout_constraintBottom_toTopOf="@+id/telBottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

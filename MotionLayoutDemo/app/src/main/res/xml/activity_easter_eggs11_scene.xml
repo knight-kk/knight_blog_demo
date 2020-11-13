@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="2000">
+        <OnClick />
+
+        <!-- 控制小球的关键帧集，让小球转圈圈 -->
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="9"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="-0.866"
+                motion:percentY="-0.5" />
+
+            <KeyPosition
+                motion:framePosition="18"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="-1.366"
+                motion:percentY="-1.366" />
+
+            <KeyPosition
+                motion:framePosition="27"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="-1.366"
+                motion:percentY="-2.366" />
+
+            <KeyPosition
+                motion:framePosition="36"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="-0.866"
+                motion:percentY="-3.232" />
+
+
+            <KeyPosition
+                motion:framePosition="45"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="-0"
+                motion:percentY="-3.732" />
+
+
+            <KeyPosition
+                motion:framePosition="54"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="1"
+                motion:percentY="-3.732" />
+
+
+            <KeyPosition
+                motion:framePosition="63"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="1.866"
+                motion:percentY="-3.232" />
+
+
+            <KeyPosition
+                motion:framePosition="72"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="2.366"
+                motion:percentY="-2.366" />
+
+            <KeyPosition
+                motion:framePosition="81"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="2.366"
+                motion:percentY="-1.366" />
+
+
+            <KeyPosition
+                motion:framePosition="90"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="1.866"
+                motion:percentY="-0.5" />
+
+            <KeyPosition
+                motion:framePosition="99"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/controlPoint"
+                motion:pathMotionArc="flip"
+                motion:percentX="1"
+                motion:percentY="0" />
+
+        </KeyFrameSet>
+
+        <!-- 各个点开始放大的位置-->
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="0"
+                motion:motionTarget="@id/point0" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="9"
+                motion:motionTarget="@id/point1" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="18"
+                motion:motionTarget="@id/point2" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="27"
+                motion:motionTarget="@id/point3" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="36"
+                motion:motionTarget="@id/point4" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="45"
+                motion:motionTarget="@id/point5" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="54"
+                motion:motionTarget="@id/point6" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="63"
+                motion:motionTarget="@id/point7" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="72"
+                motion:motionTarget="@id/point8" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="81"
+                motion:motionTarget="@id/point9" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                motion:framePosition="90"
+                motion:motionTarget="@id/point10" />
+
+            <KeyAttribute
+                android:scaleX="0"
+                android:scaleY="0"
+                motion:framePosition="80"
+                motion:motionTarget="@id/point11" />
+
+        </KeyFrameSet>
+
+        <!-- 各个点放大结束的位置-->
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="9"
+                motion:motionTarget="@id/point0" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="18"
+                motion:motionTarget="@id/point1" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="27"
+                motion:motionTarget="@id/point2" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="36"
+                motion:motionTarget="@id/point3" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="45"
+                motion:motionTarget="@id/point4" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="54"
+                motion:motionTarget="@id/point5" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="63"
+                motion:motionTarget="@id/point6" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="72"
+                motion:motionTarget="@id/point7" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="81"
+                motion:motionTarget="@id/point8" />
+            <KeyAttribute
+                android:scaleX="3"
+                android:scaleY="3"
+                motion:framePosition="90"
+                motion:motionTarget="@id/point9" />
+
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/controlPoint"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="120"
+            motion:layout_constraintCircleRadius="50dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point11"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="0"
+            android:scaleY="0"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="90"
+            motion:layout_constraintCircleRadius="110dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/controlPoint"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="90"
+            motion:layout_constraintCircleRadius="50dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+
+
+        <Constraint
+            android:id="@+id/point11"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="90"
+            motion:layout_constraintCircleRadius="110dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point0"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="120"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point1"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="150"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point2"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="180"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point3"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="210"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point4"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="240"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point5"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="270"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point6"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="300"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point7"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="330"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point8"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="360"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point9"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="30"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+        <Constraint
+            android:id="@+id/point10"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            motion:layout_constraintBottom_toBottomOf="@id/center"
+            motion:layout_constraintCircle="@id/center"
+            motion:layout_constraintCircleAngle="60"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintStart_toStartOf="@id/center" />
+
+
+    </ConstraintSet>
+</MotionScene>
