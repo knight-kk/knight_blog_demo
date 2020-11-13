@@ -36,7 +36,7 @@ object RetrofitManger {
         val interceptor = Interceptor { chain ->
             val original = chain.request()
             val requestBuilder = original.newBuilder()
-                .method(original.method(), original.body())
+                .method(original.method, original.body)
             val request = requestBuilder.build()
             chain.proceed(request)
         }
