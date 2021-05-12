@@ -6,7 +6,10 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="1000">
-        <OnSwipe />
+<!--        <OnSwipe-->
+<!--            motion:dragDirection="dragUp"-->
+<!--            motion:onTouchUp="autoComplete"-->
+<!--            motion:touchAnchorId="@id/telKeyboard" />-->
 
         <KeyFrameSet>
             <KeyAttribute
